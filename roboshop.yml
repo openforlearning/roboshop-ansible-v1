@@ -22,7 +22,6 @@
           - "roboshop-{{ item }}"
           - "roboshop-common"
         vpc_subnet_id: "{{ vpc_id }}"
-        assign_public_ip: yes
         wait: yes
         state: present
       loop: "{{ instances }}"
