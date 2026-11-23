@@ -24,7 +24,7 @@
         vpc_subnet_id: "{{ vpc_id }}"
         assign_public_ip: yes
         wait: yes
-        state: "{{ action }}"
+        state: present
       loop: "{{ instances }}"
       when: action == 'create'
 
