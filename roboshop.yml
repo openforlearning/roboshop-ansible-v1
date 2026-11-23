@@ -23,7 +23,7 @@
           - "roboshop-common"
         vpc_subnet_id: "{{ vpc_id }}"
         wait: yes
-        state: "{{ instance_action }}" 
+        state: present
       loop: "{{ instances }}"
       when: instance_action == 'create'
 
