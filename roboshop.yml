@@ -15,13 +15,13 @@
     - name: create ec2 instance
       amazon.aws.ec2_instance:
         name: "roboshop-{{ item }}"
-        instance_type: {{ instance_type }}
-        image_id: {{ ami_id }}
-        region: {{ region }}
+        instance_type: "{{ instance_type }}"
+        image_id: "{{ ami_id }}"
+        region: "{{ region }}"
         security_group: 
           - "roboshop-{{ item }}"
           - "roboshop-common"
-        vpc_subnet_id: {{ vpc_id }}
+        vpc_subnet_id: "{{ vpc_id }}"
         assign_public_ip: yes
         wait: yes
         state: "{{ action }}"
